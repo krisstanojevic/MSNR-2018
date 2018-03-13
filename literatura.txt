@@ -1,0 +1,28 @@
+https://en.wikipedia.org/wiki/Vehicle_bus
+
+http://www.interfacebus.com/Design_Connector_Automotive.html
+
+Ovde ima linkova ka nekim knjigama ako nam zatrebaju:
+http://www.ftn.uns.ac.rs/1360403998/racunarske-mreze--magistrale-i-protokoli-u-automobilu 
+
+
+https://en.wikipedia.org/wiki/Connected_car
+
+https://tf.nist.gov/seminars/WSTS/PDFs/1-0_Cisco_FBonomi_ConnectedVehicles.pdf
+
+https://www.networkworld.com/article/3200114/big-data/how-big-data-is-transforming-the-automotive-industry.html
+
+https://www.wired.com/2013/01/forget-the-internet-of-things-here-comes-the-internet-of-cars/
+
+
+Mislim da bezbednost može da nam bude 'najveći izazov'
+https://www.networkworld.com/article/3218712/internet-of-things/connected-cars-have-an-indefensible-security-vulnerability.html
+
+
+Arhitektura:
+https://pdfs.semanticscholar.org/bdc6/2ce43f4a8ef3d0d7ef367bb8c68a899ee22e.pdf
+
+http://www.ece.eng.wayne.edu/~smahmud/PersonalData/PubPapers/IGI-Book-2009.pdf
+
+
+https://www.date-conference.com/proceedings-archive/PAPERS/2013/DATE13/PDFFILES/12.1_3.PDF
