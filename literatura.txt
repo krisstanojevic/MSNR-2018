@@ -1,9 +1,14 @@
-https://en.wikipedia.org/wiki/Vehicle_bus
+﻿https://en.wikipedia.org/wiki/Vehicle_bus
 
 http://www.interfacebus.com/Design_Connector_Automotive.html
 
+https://www.popularmechanics.com/cars/how-to/a7386/how-it-works-the-computer-inside-your-car/
+
 Ovde ima linkova ka nekim knjigama ako nam zatrebaju:
 http://www.ftn.uns.ac.rs/1360403998/racunarske-mreze--magistrale-i-protokoli-u-automobilu 
+
+(Ovo mozemo da skinemo jer piraterija <3)
+http://www.autodiagnosticsandpublishing.com/Automotive_Computer_Networks_PDF.html 
 
 
 https://en.wikipedia.org/wiki/Connected_car
@@ -13,6 +18,8 @@ https://tf.nist.gov/seminars/WSTS/PDFs/1-0_Cisco_FBonomi_ConnectedVehicles.pdf
 https://www.networkworld.com/article/3200114/big-data/how-big-data-is-transforming-the-automotive-industry.html
 
 https://www.wired.com/2013/01/forget-the-internet-of-things-here-comes-the-internet-of-cars/
+
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.558.6159&rep=rep1&type=pdf
 
 
 Mislim da bezbednost može da nam bude 'najveći izazov'
