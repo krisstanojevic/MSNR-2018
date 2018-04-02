@@ -1,0 +1,131 @@
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[a4paper]{article}
+
+\usepackage{color}
+\usepackage{url}
+\usepackage[T2A]{fontenc} % enable Cyrillic fonts
+\usepackage[utf8]{inputenc} % make weird characters work
+\usepackage{graphicx}
+
+\usepackage[english,serbian]{babel}
+
+\usepackage[unicode]{hyperref}
+\hypersetup{colorlinks,citecolor=green,filecolor=green,linkcolor=blue,urlcolor=blue}
+
+\newtheorem{primer}{Primer}[section]
+
+\begin{document}
+
+\title{Naslov seminarskog rada\\ \small{Seminarski rad u okviru kursa\\Metodologija stručnog i naučnog rada\\ Matematički fakultet}}
+
+\author{Prvi autor, drugi autor (treći autor)\\ kontakt email prvog, drugog (trećeg) autora}
+\date{9.~april 2015.}
+\maketitle
+
+
+\tableofcontents
+
+\newpage
+
+\section{Uvod}
+\label{sec:uvod}
+
+%Uz sve novouvedene termine u zagradi naglasiti od koje engleske reči termin potiče. Naredni primeri ilustruju način uvođenja enlegskih termina kao i citiranje.
+
+%\begin{primer}
+%U odeljku \ref{sec:naslov1} precizirani su osnovni pojmovi, dok su zaključci dati u odeljku \ref{sec:zakljucak}.
+%\end{primer}
+
+
+
+
+
+
+%Recenziranje pl0x, ne znam srpski :(
+\section{Izazovi}
+\label{sec:izazovi}
+%stavila sam ovako da znam odakle mi je koji deo, srediće se :D
+\cite{6615528}
+
+Svaki računarski sistem može biti preplavljen propustima i slabostima koje napadač može da iskoristi ako je povezan na sistem. Elektronskim kontrolnim jedinicama (EKJ ili ECU na engleskom) nije lako pristupiti van vozila, te implementacija bezbednosnih mehanizama u računarskim mrežama u automobilima nije bila velika briga proizvođača.
+
+%TODO: 'sajber' napadi
+Umrežavanje je trend današnjice. Moderna vozila često poseduju interfejse koji omogućavaju ili žičanu ili bežičnu komunikaciju. Ovime su mreže u automobilima prestale da budu zatvorene i sajber-napadi su postali realnost.
+%link na ovaj blog https://blog.appknox.com/cyber-attacks-in-connected-cars/
+%da bi se pokazalo da jesu stvarnost i da su se desili
+
+\subsection{Razlozi za napade}
+\label{subsec:napadrazlog}
+
+Razmotrimo prvo koje sve motive napadači računarskih mreža u automobilima mogu imati.
+
+\begin{itemize}
+  \item[] \textit{Krađa}
+  
+  Napadač može da iskoristi neki prisutni propust u bežičnoj komunikaciji i na taj način tiho i neprimetno otključa automobil i zatim deaktivira alaram.
+  \item[] \textit{Elektronska podešavanja}
+  
+  %u komandnoj tabli? na? nešto treće?
+  Napadač je upravo vlasnik ciljanog automobila. Vlasnik može da pristupi kodu ili podacima i promeni ih. Na primer, može da smanji kilometražu automobila pre prodaje, izvrši podešavanje motora i dobije više snage ili instalira nedozvoljene programe u komandnoj tabli. Takođe, mogu se instalirati jeftine AFTERMARKET komponente umesto skupljih koje je odobrio proizvođač.
+  \item[] \textit{Sabotaža}
+  
+  Sabotaža podrazumeva deaktivaciju EKJ, menjanje njihovog softvera ili dos (denial of service) napade na mrežu. Posledice ovih napada se protežu od minornih (zaključavanje klima uređaja) do potencijalno smrtonosnih (zaključavanje kočnica). Ali čak i napadi koji uzrokuju samo male neprijatnosti mogu znatno da utiču na reputaciju proizvođača.
+  \item[] \textit{Intelektualna krađa}
+  
+  Napadač može da pokuša da pristupi poverljivim informacijama o EMBEDDED mreži ciljanog vozila. To se može postići prisluškivanjem magistrale ili pristupanjem izvornom kodu neke EKJ. Ovakvi napadi mogu da omoguće proizvodnju falsifikovanih EKJ, kao i širenje informacija o propustima u bezbednosti drugim napadačima. 
+  \item[] \textit{Povreda privatnosti}
+  
+  Sa povećanjem broja elektronskih komponenti, povećava se i količina privatnih informacija koje te komponente skupljaju. Napadač može da pristupi telefonskom imeniku vlasnika kao i istoriji poziva, istoriji GPS koordinata ili omiljenim radio frekvencijama. 
+  \item[] \textit{Intelektualni izazovi}
+  
+  Mnogi napadači su prosto motivisani izazovom preuzimanja kontrole nad vozilom. Postoje mnogi primeri ovakvih napada kroz istoriju računarstva. 
+  %link ka https://www.cnbc.com/id/100976139
+  %link ka https://en.wikipedia.org/wiki/HackThisSite
+\end{itemize}
+Naravno, jedan napadač može imati i više motiva.
+%Attempts to profile and classify the attackers have been done in [4] and [5], where models of attack scenarios have been defined. We
+%Moreover, in order to gain more knowledge about the attackers, Verendel et al. [7] considered the deployment of honeypots in in-vehicle networks, gathering attack data as the car is moving.
+
+\subsection{Unutrašnji napadi}
+\label{subsec:napadiunutar}
+
+Kao što je ranije pomenuto, neki bezbednosni mehanizmi su implementirani u posotjeće računarske mreže u vozilima. Bezbednost je postala značajan problem s obzirom da posledice napada mogu biti veoma ozbiljne, a napadi se mogu lakše izvesti zahvaljujući rapidnoj evoluciji mreža. 
+\begin{enumerate}
+  %prevod za Vulnerabilities :(
+  \item[] \textit{Ranjivost magistrale}
+  
+  %ovde dodaj njegove reference 8 i 9
+  Već su prikazane ranjivosti koje postoje u trenutnim protokolima, sa fokusom na CAN. Iako neke EKJ imaju specifične bezbednosne mehanizme (kao što je autentikacija uređaja), pokazano je da CAN ne može da garantuje sledeće osobine:
+  \begin{itemize}
+  	\item Poverljivost: 
+    
+    Dizajn je takav da se svaka poruka poslata na CAN i fizički i logički šalje (BROADCAST) svakom čvoru. Ovo omogućava zlonamernim čvorovima da prisluškuju magistralu i čitaju sadržaj svakakog okvira (FRAME).
+    \item Autentikacija:
+    
+    CAN okvir ne podrazumeva polje za autentikaciju svog pošiljaoca. Dakle, svaki čvor može da pošalje poruku koju bi trebalo da može da šalje samo jedan specifičan čvor.
+    
+    \item Dostupnost:
+    
+    Veoma je lako izazvati dos napad na magistrali. Na primer, neka jedinica može da preplavi magistralu okvirima visokog prioriteta i time zaustavi transmisije ostalih EKJ.
+    \item Integritet:
+    
+    CAN koristi CRC (cyclic redundancy check) da proveri da li je poruka promenjena usled greške, ali ovaj mehanizam ne može da spreči napadača koji želi da promeni ispravnu poruku jer je lako napraviti ispravan CRC za lažnu poruku.     
+  \end{itemize}
+
+%stigla sam do lokalnih napada
+\end{enumerate}
+
+
+
+
+
+
+\addcontentsline{toc}{section}{Literatura}
+\appendix
+\bibliography{seminarski} 
+\bibliographystyle{plain}
+
+
+
+\end{document}
