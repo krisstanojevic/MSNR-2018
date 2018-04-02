@@ -25,6 +25,10 @@ http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.558.6159&rep=rep1&type=
 Mislim da bezbednost može da nam bude 'najveći izazov'
 https://www.networkworld.com/article/3218712/internet-of-things/connected-cars-have-an-indefensible-security-vulnerability.html
 
+//Paper sa ieee sajta (http://ieeexplore.ieee.org/abstract/document/6615528/)
+https://hal.archives-ouvertes.fr/hal-01176042/document
+
+
 
 Arhitektura:
 https://pdfs.semanticscholar.org/bdc6/2ce43f4a8ef3d0d7ef367bb8c68a899ee22e.pdf
